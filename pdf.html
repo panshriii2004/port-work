@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smooth Scroll to Contact</title>
+  <style>
+    body {
+      height: 2000px; /* just for scroll space */
+      font-family: Arial, sans-serif;
+    }
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background: blue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    #make {
+      margin-top: 1500px; /* place contact button lower */
+    }
+  </style>
+</head>
+<body>
+  
+  <!-- Example links/buttons -->
+  <a href="#" onclick="scrollToContact()">Go to Contact (Link)</a>
+  <br><br>
+  <button onclick="scrollToContact()">Go to Contact (Button)</button>
+
+  <!-- Target button -->
+  <a href="#" class="button" id="make">Contact</a>
+
+  <script>
+    function scrollToContact() {
+      document.getElementById("make").scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+
+</body>
+</html>
